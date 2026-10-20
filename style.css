@@ -16,3 +16,123 @@
 .list-li img{
     width:190px;
 }
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* General styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    padding: 40px 20px;
+    color: #3d315b;
+    background: linear-gradient(135deg, #fce4ec, #e8ddff, #d9f0ff);
+    background-attachment: fixed;
+}
+
+/* Store heading */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#header {
+    display: inline-block;
+    padding: 20px 35px;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 24px;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 8px 32px rgba(103, 80, 164, 0.15);
+}
+
+/* Book layout */
+.list {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#book-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 28px;
+}
+
+/* Individual glass cards */
+#book-list li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 25px 20px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow: 0 8px 32px rgba(103, 80, 164, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover animation */
+#book-list li:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(103, 80, 164, 0.2);
+}
+
+/* Book titles */
+#book-list h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #49356f;
+}
+
+/* Book authors */
+#book-list p {
+    font-size: 0.9rem;
+    color: #75658d;
+    margin-bottom: 20px;
+}
+
+/* Book covers */
+#book-list img {
+    width: 150px;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(50, 30, 80, 0.2);
+    transition: transform 0.3s ease;
+}
+
+#book-list li:hover img {
+    transform: scale(1.04);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    body {
+        padding: 25px 15px;
+    }
+
+    #header {
+        font-size: 1.5rem;
+        padding: 16px 22px;
+    }
+
+    #book-list {
+        grid-template-columns: 1fr;
+    }
+}
